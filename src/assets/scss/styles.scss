@@ -1,0 +1,78 @@
+@import "../constants/constant.scss";
+@import "../css/index.css";
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@mixin wrapword {
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: pre-wrap; /* css-3 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
+}
+.wrapword {
+  @include wrapword;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noselect {
+  @include noselect;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.testLinks a {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+// === Google Map =========================================================
+
+// [usemap="#gmimap0"],
+// #gmimap0 {
+//   display: none;
+// }
+// .gmnoprint
+// a[href*="https:\/\/www\.google\.com/maps/@"]
+
+// .mainMap [aria-label="Zoom in"],
+// .mainMap [aria-label="Zoom out"] {
+//   display: none;
+// }
+
+.gm-fullscreen-control,
+.gm-svpc, 
+.gm-style-cc,
+img[src*="https://maps.gstatic.com/mapfiles/api-3/images/google4_hdpi.png"],
+.gm-style-mtc {
+  display: none;
+}
+
+.hideAll .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+  top: 100%;
+}
+
+// === /Google Map =========================================================
+
+// test scss variables
+// body {
+//   background-color: $baseColor;
+// }
