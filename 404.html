@@ -8,10 +8,10 @@
     <script>
       var pathname = window.location.pathname;
 
-      pathname = pathname.replace("/vite-react", "");
+      pathname = pathname.replace("vite-react", "");
+      pathname = pathname.replace(/^\/|\/$/g, "");
 
-      location.href =
-        "https://marvicjoshuab.github.io/vite-react/?redirect=" + pathname;
+      location.href = "//vite-react/?redirect=" + pathname;
     </script>
   </head>
   <body></body>
