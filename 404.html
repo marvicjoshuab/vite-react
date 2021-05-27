@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Redirecting</title>
     <script>
       var pathname = window.location.pathname;
 
       pathname = pathname.replace("vite-react", "");
       pathname = pathname.replace(/^\/|\/$/g, "");
 
-      location.href = "//vite-react/?redirect=" + pathname;
+      location.href =
+        "https://marvicjoshuab.github.io/vite-react/?redirect=" + pathname;
     </script>
   </head>
   <body></body>
